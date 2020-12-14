@@ -17,4 +17,9 @@ fn test_dassign() {
 
     dassign!((x, y, z) = (8, 9, 10));
     assert_eq!((x, y, z), (8, 9, 10));
+
+    for i in 1..10 {
+        dassign!((x, y, z) = (i, i+1, i+2));
+        assert_eq!((x, y, z), (i, i+1, i+2));
+    }
 }
